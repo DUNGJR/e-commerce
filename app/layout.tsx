@@ -6,10 +6,10 @@ import {
   SignInButton,
   SignedIn,
   SignedOut,
-  UserButton
-} from '@clerk/nextjs'
+  UserButton,
+} from "@clerk/nextjs";
 import { ModalProvider } from "@/providers/modal-provider";
-import prismadb from "@/lib/prismadb";
+import { ToasterProvider } from "@/providers/toast-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,11 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body className={inter.className}>
-        <ModalProvider>
-          </ModalProvider>{children}</body>
-    </html>
+      <html lang="en">
+        <body className={inter.className}>
+          <ToasterProvider></ToasterProvider>
+          <ModalProvider></ModalProvider>
+          {children}
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
