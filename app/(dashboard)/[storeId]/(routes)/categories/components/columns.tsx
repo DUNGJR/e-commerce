@@ -7,7 +7,7 @@ export type CategoryColumn = {
   id: string
   name: string
   billboardLabel: string
-  createAt: string
+  createdAt: string
 }
 
 export const columns: ColumnDef<CategoryColumn>[] = [

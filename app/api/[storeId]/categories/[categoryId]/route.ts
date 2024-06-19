@@ -16,10 +16,13 @@ export async function GET(
           where: {
               id: params.categoryId,
             },
+            include: {
+              billboard:true
+            }
       });
       return NextResponse.json(category);
     } catch (error) {
-      console.log("[CATEGORIES_GET]", error);
+      console.log("[CATEGORY_GET]", error);
       return new NextResponse("Interal error", { status: 500 });
     }
   }
@@ -70,7 +73,7 @@ export async function PATCH(
     });
     return NextResponse.json(category);
   } catch (error) {
-    console.log("[CATEGORIES_PATCH]", error);
+    console.log("[CATEGORY_PATCH]", error);
     return new NextResponse("Interal error", { status: 500 });
   }
 }
@@ -108,7 +111,7 @@ export async function DELETE(
     });
     return NextResponse.json(category);
   } catch (error) {
-    console.log("[CATEGORIES_DELETE]", error);
+    console.log("[CATEGORY_DELETE]", error);
     return new NextResponse("Interal error", { status: 500 });
   }
 }

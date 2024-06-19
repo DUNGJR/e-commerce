@@ -19,7 +19,7 @@ export async function GET(
       });
       return NextResponse.json(size);
     } catch (error) {
-      console.log("[SIZES_GET]", error);
+      console.log("[SIZE_GET]", error);
       return new NextResponse("Interal error", { status: 500 });
     }
   }
@@ -70,7 +70,7 @@ export async function PATCH(
     });
     return NextResponse.json(size);
   } catch (error) {
-    console.log("[SIZES_PATCH]", error);
+    console.log("[SIZE_PATCH]", error);
     return new NextResponse("Interal error", { status: 500 });
   }
 }
@@ -108,7 +108,7 @@ export async function DELETE(
     });
     return NextResponse.json(size);
   } catch (error) {
-    console.log("[SIZES_DELETE]", error);
+    console.log("[SIZE_DELETE]", error);
     return new NextResponse("Interal error", { status: 500 });
   }
 }

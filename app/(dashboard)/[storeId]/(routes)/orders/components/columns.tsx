@@ -33,5 +33,5 @@ export const columns: ColumnDef<OrderColumn>[] = [
     accessorKey: "isPaid",
     header: "Paid",
   },
-
+ 
 ]

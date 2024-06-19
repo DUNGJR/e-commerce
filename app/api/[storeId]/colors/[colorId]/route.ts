@@ -19,7 +19,7 @@ export async function GET(
       });
       return NextResponse.json(color);
     } catch (error) {
-      console.log("[COLORS_GET]", error);
+      console.log("[COLOR_GET]", error);
       return new NextResponse("Interal error", { status: 500 });
     }
   }
@@ -70,7 +70,7 @@ export async function PATCH(
     });
     return NextResponse.json(color);
   } catch (error) {
-    console.log("COLORS_PATCH]", error);
+    console.log("COLOR_PATCH]", error);
     return new NextResponse("Interal error", { status: 500 });
   }
 }
@@ -108,7 +108,7 @@ export async function DELETE(
     });
     return NextResponse.json(color);
   } catch (error) {
-    console.log("[COLORS_DELETE]", error);
+    console.log("[COLOR_DELETE]", error);
     return new NextResponse("Interal error", { status: 500 });
   }
 }
