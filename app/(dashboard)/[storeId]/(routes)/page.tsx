@@ -23,12 +23,12 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
 
   <div className="flex-col">
     <div className="flex-1 space-y-4 p-8 pt-6">
-      <Heading title="Dashboard" description="Tổng quan cửa hàng"></Heading>
+      <Heading title="Dashboard" description=""></Heading>
       <Separator></Separator>
       <div className="grid gap-4 grid-cols-3">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-          <CardTitle className="text-sm font-medium">Tổng doanh thu</CardTitle>
+          <CardTitle className="text-sm font-medium">Total revenue</CardTitle>
           <DollarSign className="h-4 w-4 text-muted-foreground"></DollarSign>
           </CardHeader>
           <CardContent>
@@ -49,7 +49,7 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
         <Card>
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
 
-          <CardTitle className="text-sm font-medium">Sản phẩm trong kho</CardTitle>
+          <CardTitle className="text-sm font-medium">Products in stock</CardTitle>
           <CreditCard className="h-4 w-4 text-muted-foreground"></CreditCard>
           
           </CardHeader>
