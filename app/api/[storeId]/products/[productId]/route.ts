@@ -19,7 +19,6 @@ export async function GET(
         images: true,
         category: true,
         color: true,
-        size: true,
       },
     });
     return NextResponse.json(product);
@@ -41,7 +40,6 @@ export async function PATCH(
       price,
       categoryId,
       colorId,
-      sizeId,
       images,
       isFeatured,
       isArchived,
@@ -70,9 +68,7 @@ export async function PATCH(
       return new NextResponse("Color id is required", { status: 400 });
     }
 
-    if (!sizeId) {
-      return new NextResponse("Size id is required", { status: 400 });
-    }
+
 
     if (!params.productId) {
       return new NextResponse("Product is required", { status: 400 });
@@ -98,7 +94,6 @@ export async function PATCH(
         price,
         categoryId,
         colorId,
-        sizeId,
         isFeatured,
         isArchived,
         storeId: params.storeId,
